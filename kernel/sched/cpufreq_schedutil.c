@@ -1028,7 +1028,8 @@ static int sugov_init(struct cpufreq_policy *policy)
 	tunables->hispeed_load = DEFAULT_HISPEED_LOAD;
 	tunables->hispeed_freq = 0;
 
-	tunables->iowait_boost_enable = false;
+	/* Enable iowait_boost by default */
+	tunables->iowait_boost_enable = true;
 
 	/* Disable exponential frequency scaling by default */
 	tunables->exp_util = false;
